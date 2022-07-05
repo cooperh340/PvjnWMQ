@@ -3,7 +3,6 @@ package hub
 import (
 	"github.com/Dreamacro/clash/config"
 	"github.com/Dreamacro/clash/hub/executor"
-	"github.com/Dreamacro/clash/hub/route"
 )
 
 type Option func(*config.Config)
@@ -22,7 +21,6 @@ func WithExternalController(externalController string) Option {
 
 func WithSecret(secret string) Option {
 	return func(cfg *config.Config) {
-		cfg.General.Secret = secret
 	}
 }
 
